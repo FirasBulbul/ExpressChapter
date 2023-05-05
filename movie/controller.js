@@ -1,4 +1,4 @@
-const { getAll, remove, get } = require('./model.js');
+const { getAll, remove, get, save } = require('./model.js');
 const { render } = require('./view.js');
 const { render: form } = require('./form.js')
 
@@ -24,4 +24,14 @@ const formAction = async (req, res) => {
     // res.redirect(req.baseUrl);
 }
 
-module.exports = { listAction, removeAction, formAction }
+const saveAction = async (req, res) => {
+    const movie = {
+        // id: req.body.id,
+        title: req.body.title,
+        year: req.body.year,
+    };
+    await save(movie);
+    res.redirect(req.baseUrl);
+}
+
+module.exports = { listAction, removeAction, formAction, saveAction }

@@ -17,4 +17,15 @@ const get = (id) => {
     return Promise.resolve(data.find((movie) => movie.id === id));
 }
 
+const save = (movie) => {
+    if (movie.id === '') {
+        // insert(movie);
+        data.push(movie);
+    } else {
+        // update(movie);
+    }
+    return Promise.resolve();
+
+}
+
 module.exports = { getAll, remove, get }
