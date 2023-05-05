@@ -21,12 +21,11 @@ const formAction = async (req, res) => {
     }
     const body = form(movie);
     res.send(body);
-    // res.redirect(req.baseUrl);
 }
 
 const saveAction = async (req, res) => {
     const movie = {
-        // id: req.body.id,
+        id: req.body.id,
         title: req.body.title,
         year: req.body.year,
     };
