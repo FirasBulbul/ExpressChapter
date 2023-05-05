@@ -34,4 +34,4 @@ const saveAction = async (req, res) => {
     res.redirect(req.baseUrl);
 }
 
-module.exports = { listAction, removeAction, formAction, saveAction }
+module.exports = { listAction, removeAction, formAction,saveAction }
