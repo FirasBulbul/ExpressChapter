@@ -22,10 +22,10 @@ const save = (movie) => {
         // insert(movie);
         data.push(movie);
     } else {
-        // update(movie);
+        update(movie);
     }
     return Promise.resolve();
 
 }
 
-module.exports = { getAll, remove, get }
+module.exports = { getAll, remove, get, save }
