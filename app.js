@@ -1,17 +1,17 @@
 const express = require('express');
-// const morgan = require('morgan');
-// const { dirname } = require('path');
-// const { fileURLToPath } = require('url');
+const morgan = require('morgan');
 const { router: movieRouter } = require('./movie/index.js');
 const PORT = process.env.PORT || 3000
 
 const app = express();
 
-// app.use(express.static(`${dirname(fileURLToPath(import.meta.url))}/public`));
+app.set('view engine', 'pug');
 
-// app.use(morgan('common', { immediate: true }));
+app.use(express.static(`./style.css/public`));
 
-// app.use(express.urlencoded({ extended: false }));
+app.use(morgan('common', { immediate: true }));
+
+app.use(express.urlencoded({ extended: false }));
 
 app.use('/movie', movieRouter);
 

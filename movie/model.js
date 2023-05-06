@@ -22,7 +22,7 @@ const save = (movie) => {
         // insert(movie);
         data.push(movie);
     } else {
-        update(movie);
+        // update(movie);
     }
     return Promise.resolve();
 
