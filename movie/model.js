@@ -4,6 +4,8 @@ let data = [
     { id: 3, title: 'Captain America', year: '2011' },
 ];
 
+const file = require('./file.json');
+
 const getAll = () => {
     return Promise.resolve(data);
 }

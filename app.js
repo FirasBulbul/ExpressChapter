@@ -9,6 +9,8 @@ app.set('view engine', 'pug');
 
 app.use(express.static(`./style.css/public`));
 
+app.set('views', './templates');
+
 app.use(morgan('common', { immediate: true }));
 
 app.use(express.urlencoded({ extended: false }));
